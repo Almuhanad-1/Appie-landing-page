@@ -257,7 +257,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 3.2rem;
+  gap: 2.4rem;
 }
 
 .whenever-list li {
@@ -287,12 +287,12 @@
 
 .whenever-list li h4::before {
   content: "";
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 2rem;
+  height: 2rem;
   display: block;
   position: absolute;
   top: 0.7rem;
-  left: -3.6rem;
+  left: -4rem;
   border-radius: 50%;
 }
 
@@ -318,6 +318,94 @@
 
 .whenever-img {
   height: 90%;
+}
+
+/* ********************* */
+/*  statistics SECTION  */
+/* ********************* */
+
+.section-statistics {
+  padding: 9.6rem 0;
+}
+
+.counter-cards {
+  margin: 9.6rem 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.counter-card {
+  padding: 3.2rem 4.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 1.2rem; */
+  border-radius: 0.6rem;
+}
+
+.counter-card:nth-child(1) {
+  box-shadow: 0px 1.2rem 4.8rem 0 rgba(0, 0, 0, 0.075),
+    0px 1.2rem 2.4rem 0 rgba(51, 155, 240, 0.05);
+}
+
+.counter-card:nth-child(2) {
+  box-shadow: 0px 1.2rem 4.8rem 0 rgba(0, 0, 0, 0.075),
+    0px 1.2rem 2.4rem 0 rgba(252, 195, 25, 0.05);
+}
+
+.counter-card:nth-child(3) {
+  box-shadow: 0px 1.2rem 4.8rem 0 rgba(0, 0, 0, 0.075),
+    0px 1.2rem 2.4rem 0 rgba(64, 192, 87, 0.05);
+}
+
+.counter-card:nth-child(4) {
+  box-shadow: 0px 1.2rem 4.8rem 0 rgba(0, 0, 0, 0.075),
+    0px 1.2rem 2.4rem 0 rgba(230, 73, 128, 0.05);
+}
+
+.counter-number {
+  font-size: 3.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.counter-name {
+  font-size: 1.4rem;
+  color: #777;
+}
+
+.video-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+  justify-content: center;
+  /* justify-items: end; */
+}
+.video-image-1 img {
+  /* width: 110%; */
+}
+
+.video-desc {
+  margin-left: 8rem;
+  justify-self: end;
+}
+.video-desc a {
+  margin-top: 2.4rem;
+}
+.video-arrows {
+  justify-self: end;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-right: 2.4rem;
+}
+
+/* ********************* */
+/*  statistics SECTION  */
+/* ********************* */
+
+.section-download {
+  padding: 9.6rem 0;
+  background-color: var(--gray);
 }
 
 /* 
