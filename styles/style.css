@@ -5,21 +5,29 @@
 .header {
   width: 100%;
   height: 9.6rem;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8rem;
   padding: 0 9.6rem;
   background-color: var(--gray);
 }
 
 .logo {
-  height: 3rem;
+  height: 3.2rem;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 3.2rem;
   font-size: 1.6rem;
 }
@@ -44,6 +52,17 @@
   font-size: 1.2rem;
 }
 
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+  z-index: 20;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
 /* ***************** */
 /* **** HERO SECTION ***** */
 /* ***************** */
@@ -56,14 +75,9 @@
   max-width: 160rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 12.8rem 0 0 9.6rem;
+  padding: 9.6rem 0 0 9.6rem;
   display: grid;
   grid-template-columns: 40fr 60fr;
-}
-
-.grid--hero {
-  display: grid;
-  grid-template-columns: 45fr 55fr;
 }
 
 .heading-primary {
@@ -78,8 +92,16 @@
   margin-bottom: 4.8rem;
 }
 
+.hero-img-box {
+  text-align: end;
+  /* position: relative; */
+}
+
 .hero-img {
-  width: 100%;
+  width: 90%;
+  /* position: absolute;
+  bottom: 0;
+  right: 0; */
 }
 
 .hero-email {
@@ -100,12 +122,12 @@
   width: 30rem;
   font-size: 1.8rem;
   padding: 2rem;
-  /* border-radius: 100px; */
+  color: #333;
   background-color: #fff;
 }
 
 .hero-email-arrow {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #ff7894;
   cursor: pointer;
 }
@@ -113,7 +135,7 @@
   color: #ff6585;
 }
 .hero-mail-icon {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #bbb;
 }
 
@@ -141,11 +163,11 @@
 }
 
 .nubmber {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 600;
 }
 .feedback {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   /* letter-spacing: 0.2px; */
   color: #585a70;
 }
@@ -197,6 +219,8 @@
 
 .features-btn:link,
 .features-btn:visited {
+  display: flex;
+  align-items: center;
   margin-left: auto;
   cursor: pointer;
   gap: 0.4rem;
@@ -218,16 +242,15 @@
 
 .marketing {
   gap: 3.2rem;
-  height: 45rem;
-  padding: 0 8rem;
-  /* margin-top: 4.8rem; */
+  padding: 0 6.4rem;
   background-color: var(--gray);
   overflow: hidden;
 }
+
 .marketing-img-box {
   background-image: url(../images/about-thumb.png);
   background-repeat: no-repeat;
-  /* height: 100%; */
+  background-position-x: center;
 }
 
 .marketing-text-box {
@@ -240,17 +263,22 @@
 }
 
 .marketing-list li {
-  position: relative;
-  margin-left: 4.8rem;
+  display: flex;
+  gap: 1.2rem;
 }
-.marketing-list li::before {
+
+.marketing-list-icon {
+  font-size: 4.8rem;
+  color: #40c057;
+}
+
+/* .marketing-list li::before {
   content: url(/images/check_circle.svg);
   display: inline-block;
   position: absolute;
   top: 0;
   left: -5.7rem;
-  /* font-size: 2.4rem; */
-}
+} */
 
 /* ********************* */
 /*  When Ever SECTION  */
@@ -273,6 +301,7 @@
 .whenever-body {
   align-items: center;
   justify-items: center;
+  gap: 3.2rem;
 }
 
 .whenever-list {
@@ -338,8 +367,12 @@
   position: relative;
 }
 
+.whenever-img-box {
+  text-align: end;
+}
+
 .whenever-img {
-  height: 90%;
+  width: 100%;
 }
 
 /* ********************* */
@@ -352,8 +385,10 @@
 
 .counter-cards {
   margin: 9.6rem 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-evenly;
+  gap: 2.4rem;
 }
 
 .counter-card {
@@ -397,13 +432,22 @@
 
 .video-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3.2rem;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.4rem;
   justify-content: center;
   /* justify-items: end; */
 }
 .video-image-1 img {
-  /* width: 110%; */
+  width: 100%;
+  height: 100%;
+}
+.video-image-2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.video-image-2 {
+  text-align: end;
 }
 
 .video-desc {
@@ -651,11 +695,11 @@
 /*  TESTIMONIALS SECTION  */
 /* ********************* */
 .testimonial {
-  padding: 12.8rem 16.8rem;
+  padding: 9.8rem 12.8rem;
   background-image: url(/images/testimonial-bg-2.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 450px;
+  /* height: 450px; */
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 4.8rem;
@@ -675,9 +719,6 @@
 
 .testimonial-text {
   grid-column: 2/-1;
-}
-
-.testimonial-text p {
   font-size: 2rem;
   line-height: 1.5;
   color: #eee;
@@ -700,6 +741,7 @@
 
 .testimonial-info {
   justify-self: start;
+  grid-column: 2/4;
 }
 
 .testimonial-name {

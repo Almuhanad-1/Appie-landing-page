@@ -26,13 +26,14 @@
     />
     <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/queries.css" />
   </head>
   <body>
     <header class="header">
       <a href="#" class="logo-link">
         <img src="images/logo.png" alt="logo" id="logo" class="logo" />
       </a>
-      <nav>
+      <nav class="main-nav">
         <ul class="nav-list">
           <li class="nav-list-item">
             <span> <a href="#">Home</a></span>
@@ -53,8 +54,10 @@
             <a href="#">Contact</a>
           </li>
         </ul>
+        <a href="#" class="btn btn--full">Get Started</a>
       </nav>
-      <a href="#" class="btn btn--full">Get Started</a>
+      <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+      <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
     </header>
 
     <main>
@@ -124,11 +127,11 @@
       <section class="section-how">
         <div class="container">
           <h2 class="secondary-heading">How does it work</h2>
-          <div class="flex">
+          <div class="flex-col flex">
             <p class="subheading">
               The full monty spiffing good time no biggie cack grub fantastic.
             </p>
-            <a class="btn btn--gray flex features-btn" href="#">
+            <a class="btn btn--gray features-btn" href="#">
               <span>View all Features</span>
               <ion-icon class="features-icon" name="arrow-forward-outline">
               </ion-icon>
@@ -259,12 +262,28 @@
               </p>
               <ul class="grid grid--2-col marketing-list">
                 <li>
-                  <h4 class="heading-4">Carefully designed</h4>
-                  <p class="paragraph">Mucker every day also life are good.</p>
+                  <ion-icon
+                    class="marketing-list-icon"
+                    name="checkmark-circle"
+                  ></ion-icon>
+                  <div>
+                    <h4 class="heading-4">Carefully designed</h4>
+                    <p class="paragraph">
+                      Mucker every day also life are good.
+                    </p>
+                  </div>
                 </li>
                 <li>
-                  <h4 class="heading-4">Carefully designed</h4>
-                  <p class="paragraph">Mucker every day also life are good.</p>
+                  <ion-icon
+                    class="marketing-list-icon"
+                    name="checkmark-circle"
+                  ></ion-icon>
+                  <div>
+                    <h4 class="heading-4">Carefully designed</h4>
+                    <p class="paragraph">
+                      Mucker every day also life are good.
+                    </p>
+                  </div>
                 </li>
               </ul>
             </div>
