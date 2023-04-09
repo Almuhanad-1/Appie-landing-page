@@ -57,11 +57,16 @@
   width: 4.8rem;
   color: #333;
   z-index: 20;
+  display: none;
 }
-
+/* 
 .icon-mobile-nav[name="close-outline"] {
   display: none;
 }
+
+.icon-mobile-nav[name="menu-outline"] {
+  display: none;
+} */
 
 /* ***************** */
 /* **** HERO SECTION ***** */

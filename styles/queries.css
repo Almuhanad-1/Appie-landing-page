@@ -183,10 +183,18 @@
     gap: 2.4rem;
   }
 
+  body.open-nav {
+    overflow-y: hidden;
+  }
+
   .open-nav .btn {
     font-size: 2.4rem;
     padding-left: 3.2rem;
     padding-right: 3.2rem;
+  }
+
+  .icon-mobile-nav[name="menu-outline"] {
+    display: block;
   }
 
   .open-nav .icon-mobile-nav[name="close-outline"] {
