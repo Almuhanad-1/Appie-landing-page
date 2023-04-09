@@ -70,7 +70,7 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/queries.css" />
   </head>
-  <body class="open-nav">
+  <body>
     <header class="header">
       <a href="#" class="logo-link">
         <img src="images/logo.png" alt="logo" id="logo" class="logo" />
@@ -838,5 +838,37 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // Mobile nav
+      const navBtns = document.querySelectorAll(".icon-mobile-nav");
+      navBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.body.classList.toggle("open-nav");
+        });
+      });
+
+      // Sticky header
+      const header = document.querySelector(".header");
+      const body = document.body;
+      const hero = document.querySelector(".section-hero");
+      const sticky = header.offsetTop;
+      const heroBottom = hero.offsetTop + hero.offsetHeight;
+      console.log(hero.offsetTop);
+      console.log(hero.offsetHeight);
+      function updateHeader() {
+        if (window.pageYOffset > heroBottom) {
+          body.classList.add("sticky");
+          header.style.top = 0;
+          header.style.backgroundColor = "#fff";
+        } else {
+          body.classList.remove("sticky");
+          header.style.top = "-100px";
+          header.style.backgroundColor = "var(--gray)";
+        }
+      }
+
+      // window.addEventListener("scroll", updateHeader);
+    </script>
   </body>
 </html>
