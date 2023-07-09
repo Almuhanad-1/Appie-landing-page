@@ -244,9 +244,6 @@
   }
   .heading-3 {
   }
-  .container {
-    padding: 0 6.4rem;
-  }
 
   .grid--2-col,
   .grid--3-col,
@@ -304,6 +301,20 @@
 
   .video-arrows {
     display: none;
+  }
+
+  .section-download {
+    padding: 9.6rem 0;
+  }
+
+  .download-btns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .download-btn:link,
+  .download-btn:visited {
+    padding: 1.5rem 4rem 1.5rem 2rem;
   }
 
   .pricing-plan {

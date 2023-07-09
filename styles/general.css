@@ -44,10 +44,12 @@ Paragraph: 1.6
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
   /* max-width: 150rem; */
+  overflow-x: hidden;
   font-family: "Roboto", sans-serif;
   color: var(--font-color);
   margin-right: auto;
