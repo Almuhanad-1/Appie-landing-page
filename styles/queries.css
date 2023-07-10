@@ -242,8 +242,6 @@
   .secondary-heading {
     font-size: 3rem;
   }
-  .heading-3 {
-  }
 
   .grid--2-col,
   .grid--3-col,
@@ -303,18 +301,27 @@
     display: none;
   }
 
-  .section-download {
-    padding: 9.6rem 0;
+  .download-btns {
+    gap: 2.2rem;
   }
 
-  .download-btns {
-    flex-direction: column;
-    align-items: flex-start;
+  .download-btn-icon {
+    font-size: 2.4rem;
   }
 
   .download-btn:link,
   .download-btn:visited {
-    padding: 1.5rem 4rem 1.5rem 2rem;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 9px;
+    cursor: pointer;
+  }
+
+  .download-btn-heading-3 {
+    font-weight: 500;
   }
 
   .pricing-plan {
@@ -364,4 +371,37 @@
   .grid-footer {
     gap: 6.4rem;
   }
+
+  .footer-download-btn-icon {
+    font-size: 4.4rem;
+  }
+
+  .footer-download-btn {
+    padding: 0.8rem 1.6rem;
+  }
 }
+
+/* 
+.download-btn:link, .download-btn:visited {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.6rem 2.4rem;
+  border-radius: 9px;
+  cursor: pointer;
+} 
+
+
+.footer-download-btn {
+    all: unset;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.6rem 2.4rem;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+*/
