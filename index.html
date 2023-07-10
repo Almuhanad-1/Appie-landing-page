@@ -845,6 +845,7 @@
       navBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
           document.body.classList.toggle("open-nav");
+          document.documentElement.classList.toggle("overflow-y-hidden");
         });
       });
 
